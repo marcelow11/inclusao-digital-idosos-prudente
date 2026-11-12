@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso Fácil - Inclusão Digital para Idosos (Presidente Prudente - SP)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Barra Superior de Acessibilidade -->
+    <header class="barra-acessibilidade" role="banner">
+        <div class="container-topo">
+            <span class="titulo-acessibilidade">Ajustes de Leitura:</span>
+            <div class="botoes-controle">
+                <button type="button" id="btn-aumentar-fonte" aria-label="Aumentar tamanho da letra">A+ (Aumentar Letra)</button>
+                <button type="button" id="btn-diminuir-fonte" aria-label="Diminuir tamanho da letra">A- (Diminuir Letra)</button>
+                <button type="button" id="btn-alto-contraste" aria-label="Alternar modo de alto contraste">Alto Contraste</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="container-principal" role="main">
+        <section class="cabecalho-sistema">
+            <h1>Portal Acesso Fácil</h1>
+            <p class="subtitulo">Serviços Essenciais Simplificados – Presidente Prudente / SP</p>
+            <p class="instrucao">Toque em um dos cartões grandes abaixo para acessar o serviço desejado:</p>
+        </section>
+
+        <!-- Grade de Cartões Simplificados -->
+        <section class="grade-servicos" aria-label="Serviços Essenciais">
+            <button type="button" class="cartao-servico" data-servico="Agendamento de Consultas (SUS / UBS)" data-url="https://www.gov.br/saude">
+                <span class="icone" aria-hidden="true">🏥</span>
+                <span class="nome-servico">Agendar Consulta Médica</span>
+                <span class="desc-servico">Acesso direto ao posto de saúde e exames</span>
+            </button>
+
+            <button type="button" class="cartao-servico" data-servico="Meu INSS (Aposentadoria e Benefícios)" data-url="https://meu.inss.gov.br">
+                <span class="icone" aria-hidden="true">📄</span>
+                <span class="nome-servico">Meu INSS e Benefícios</span>
+                <span class="desc-servico">Consultar extrato, prova de vida e pagamentos</span>
+            </button>
+
+            <button type="button" class="cartao-servico" data-servico="Farmácia Popular e Receitas" data-url="https://www.gov.br/saude/pt-br/composicao/sectics/farmacia-popular">
+                <span class="icone" aria-hidden="true">💊</span>
+                <span class="nome-servico">Farmácia Popular</span>
+                <span class="desc-servico">Verificar medicamentos gratuitos disponíveis</span>
+            </button>
+
+            <button type="button" class="cartao-servico emergencia" data-servico="Telefones de Emergência (SAMU 192 / Polícia 190)" data-url="tel:192">
+                <span class="icone" aria-hidden="true">🚨</span>
+                <span class="nome-servico">Ajuda e Emergência</span>
+                <span class="desc-servico">Ligar rápido para SAMU (192) ou Polícia (190)</span>
+            </button>
+        </section>
+    </main>
+
+    <!-- Modal de Confirmação Explícita (Prevenção de Erros Acidentais) -->
+    <div id="modal-confirmacao" class="modal-fundo oculto" role="dialog" aria-modal="true" aria-labelledby="titulo-modal">
+        <div class="modal-caixa">
+            <h2 id="titulo-modal">Confirmar Acesso</h2>
+            <p id="texto-modal">Você deseja abrir o serviço selecionado?</p>
+            <div class="modal-acoes">
+                <button type="button" id="btn-confirmar-acao" class="btn-sim">Sim, Abrir Agora</button>
+                <button type="button" id="btn-cancelar-acao" class="btn-nao">Não, Voltar</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="rodape" role="contentinfo">
+        <p>Projeto Extensionista II – CST em Gestão da Tecnologia da Informação (UNINTER)</p>
+        <p>Desenvolvido por Marcelo Vargas Thomazini | Presidente Prudente - SP</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
